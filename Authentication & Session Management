@@ -1,1 +1,30 @@
+## Resumen: TTPs de MITRE ATT&CK para Broken Authentication & Session Management
 
+**Táctica: Acceso Inicial (TA0001)**
+
+* **T1078: Valid Accounts:** Utilizar cuentas legítimas existentes para obtener acceso al sistema.
+    * **T1078.001: Default Accounts:** Acceder con credenciales predeterminadas sin cambiar.
+    * **T1078.002: Domain Accounts:** Comprometer una cuenta de dominio con acceso al sistema.
+    * **T1078.003: Local Accounts:** Usar cuentas locales débiles o conocidas.
+* **T1133: External Remote Services:** Explotar servicios de acceso remoto con autenticación débil.
+* **T1190: Exploit Public-Facing Application:** Aprovechar vulnerabilidades de autenticación en la aplicación.
+* **T1539: Steal Web Session Cookie:** (Adaptado) Robar cookies de sesión si la app usa componentes web para autenticación.
+
+**Táctica: Obtención de Credenciales (TA0006)**
+
+* **T1552: Unsecured Credentials:** Explotar el almacenamiento inseguro de credenciales.
+    * **T1552.001: Credentials in Files:** Usar credenciales encontradas en archivos.
+    * **T1552.002: Credentials in Registry:** (Windows) Acceder a credenciales inseguras en el registro.
+    * **T1552.003: Credentials in Configuration Files:** Utilizar credenciales en archivos de configuración.
+* **T1555: Credentials from Password Stores:** Intentar acceder a credenciales gestionadas localmente.
+* **T1556: Modify Authentication Process:** Manipular el proceso de autenticación.
+    * **T1556.001: Credentials Phishing:** (Adaptado) Engañar para obtener credenciales directamente en la app.
+
+**Procedimientos de Prueba de Concepto:**
+
+* **Fuerza Bruta:** Intentar acceder con listas de contraseñas comunes.
+* **Bypass de Autenticación:** Explotar vulnerabilidades para omitir la autenticación.
+* **Reutilización de Sesiones:** (Adaptado) Usar o manipular tokens de sesión previamente obtenidos.
+* **Explotación de Credenciales Almacenadas:** Buscar y usar credenciales inseguras en diversas ubicaciones.
+
+---
