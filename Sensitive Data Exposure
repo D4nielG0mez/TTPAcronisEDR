@@ -1,1 +1,32 @@
+```markdown
+## Resumen: TTPs de MITRE ATT&CK para Sensitive Data Exposure
 
+**Táctica: Obtención de Credenciales (TA0006)**
+
+* **T1552: Unsecured Credentials:** Explotar el almacenamiento inseguro de credenciales.
+    * **T1552.001: Credentials in Files:** Credenciales guardadas sin cifrar o con cifrado débil en archivos de configuración, logs, u otros.
+    * **T1552.002: Credentials in Registry:** (Windows) Credenciales almacenadas de forma insegura en el registro del sistema.
+    * **T1552.003: Credentials in Configuration Files:** Credenciales presentes en archivos de configuración de la aplicación.
+
+**Táctica: Recolección (TA0009)**
+
+* **T1005: Data from Local System:** Obtener datos directamente del sistema local donde se ejecuta la aplicación de escritorio.
+* **T1025: Data from Removable Media:** Acceder a datos sensibles en medios extraíbles.
+* **T1039: Data from Network Shared Drive:** Acceder a datos sensibles en unidades de red compartidas.
+* **T1113: Screen Capture:** (Potencial) Explotar o utilizar funcionalidades de captura de pantalla para ver datos sensibles.
+* **T1555: Credentials from Password Stores:** (Relevante si la app interactúa con gestores de contraseñas y expone esa info).
+* **T1556: Modify Authentication Process:** (Si la manipulación lleva a la exposición de datos sensibles).
+
+**Táctica: Exfiltración (TA0010)**
+
+* **T1041: Exfiltration Over C2 Channel:** Extraer datos sensibles a través del canal de comunicación comprometido.
+* **T1048: Exfiltration Over Alternative Protocol:** Usar protocolos no estándar para extraer datos.
+* **T1052: Exfiltration Over Physical Medium:** Copiar datos sensibles a dispositivos físicos.
+
+**Posibles escenarios de "Sensitive Data Exposure":**
+
+* Almacenamiento inseguro de información personal (T1552, T1005).
+* Exposición de claves API o tokens (T1552.001, T1552.003).
+* Lectura de datos en memoria sin cifrar (T1005).
+* Acceso no autorizado a bases de datos locales (T1005).
+* Visualización de información sensible sin controles adecuados (T1113 - potencial).
